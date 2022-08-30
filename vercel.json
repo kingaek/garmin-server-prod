@@ -1,12 +1,18 @@
 {
+  "name": "garmin-server-prod",
   "version": 2,
-  "build": {
-    "use": "@vercel/node"
+  "env": {
+    "DATABASE_URL": "mongodb+srv://aekryz:mbhy2qleAwtn4VWQ@cluster0.jtv0zte.mongodb.net/garminclone?retryWrites=true&w=majority"
   },
-  "routes": [
+  "build": {
+    "env": {
+      "DATABASE_URL": "mongodb+srv://aekryz:mbhy2qleAwtn4VWQ@cluster0.jtv0zte.mongodb.net/garminclone?retryWrites=true&w=majority"
+    }
+  },
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "src": "*.js",
+      "use": "@vercel/node"
     }
   ]
 }
