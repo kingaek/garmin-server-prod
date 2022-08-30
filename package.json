@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "vercel-build": "prisma generate",
-    "prisma:generate": "prisma generate",
+    "vercel-build": "npx prisma generate",
     "start": "node index.js",
     "preview": "node index.js"
   },
